@@ -1,0 +1,93 @@
+<code class="language-html"><!DOCTYPE html>  
+<html>  
+<head lang="en">  
+    <meta charset="UTF-8">  
+    <title>统计在线人数</title>  
+    <script src="./js/socket.io.js"></script>  
+    <script src="./js/jquery-latest.min.js"></script>  
+    <script type="text/javascript">  
+        // 创建websocket连接  
+        var socket = io.connect('ws://chaobis.lian2345.com:5000');  
+        // 把信息显示到div上  
+        socket.on('onlinenums', function (data) {  
+  
+                $("#nums").html(data.nums);  
+        });  
+		
+		
+
+
+	   /* socket.emit('huobi', {type:"all"}); //向服务器发送消息.币安所有
+				socket.on('all', function (data) {  
+				  
+				
+                       console.log(JSON.parse(data));
+                });*/
+				
+				
+				 socket.emit('huobi', {type:"detail",detail:'btcusdt'}); //向服务器发送消息.币安所有
+				socket.on('btcusdt', function (data) {  
+				  
+				
+                       console.log(JSON.parse(data));
+                });
+				
+				
+      
+
+       
+
+		
+        /////////////////////////////////////////////////////////////////////////////////		
+		//   
+		/*socket.emit('binance', {type:"all"}); //向服务器发送消息.币安所有
+			socket.on('binanceData', function (data) {  
+  
+                console.log(JSON.parse(data));
+       }); */ 
+	  
+	  
+		/*//详情time    1m,3m,5m,15m,30m,1h,2h,4h,6h,8h,12h,1d,3d,1w,1M
+		socket.emit('binance', {type:"detail",detail:'ETHBTC',time:'1m'}); //向服务器发送消息,币安单个详情
+		
+		//k线
+		socket.on('binanceK', function (data) {  
+              var candlesticks = JSON.parse(data);
+              let { e:eventType, E:eventTime, s:symbol, k:ticks } = candlesticks;
+			  let { o:open, h:high, l:low, c:close, v:volume, n:trades, i:interval, x:isFinal, q:quoteVolume, V:buyVolume, Q:quoteBuyVolume } = ticks;
+			  console.log(symbol+" "+interval+" candlestick update");
+			  console.log("open: "+open);
+			  console.log("high: "+high);
+			  console.log("low: "+low);
+			  console.log("close: "+close);
+			  console.log("volume: "+volume);
+			  console.log("isFinal: "+isFinal);
+       });  
+		
+		//详情
+		socket.on('binanceDetail', function (data) {  
+  
+            console.log(JSON.parse(data));
+        });  
+		
+		 //深度
+		 socket.emit('binance', {type:"depth",detailList:['ETHBTC','BNBBTC']}); //向服务器发送消息,币安单个详情
+		
+		//深度详情
+		socket.on('binanceDepths', function (data) {  
+              var depth = JSON.parse(data);
+             let {e:eventType, E:eventTime, s:symbol, u:updateId, b:bidDepth, a:askDepth} = depth;
+            console.log(symbol+" market depth update");
+             console.log(bidDepth, askDepth);
+        });  */
+		
+    </script>  
+</head>  
+<body>  
+  
+    当前在线人数:<span style="color: red;" id="nums">0</span>  
+	
+  
+  
+</body>  
+</html> </code>

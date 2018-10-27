@@ -1,0 +1,260 @@
+/*swiper*/
+
+.swiper-pagination-bullets {
+    bottom: -.06rem !important;
+}
+
+.swiper-pagination-bullet {
+    width: .12rem;
+    height: .12rem;
+    background: rgba(41, 220, 84, .3);
+    opacity: 1;
+}
+
+.wallet-bullet-active {
+    width: .36rem;
+    height: .12rem;
+    background: #36DE5F;
+    border-radius: .06rem;
+    opacity: 1;
+}
+
+
+/*swiper end*/
+
+
+/*mt-range*/
+
+.mt-range-content {
+    height: .3rem;
+    margin: 0;
+}
+
+.mt-range-runway {
+    right: -.2rem;
+    border-radius: 5px;
+    border-top-color: #E2EAEE;
+}
+
+.mt-range-progress {
+    border-radius: 5px;
+    background-color: #29DC54;
+}
+
+.mt-range-thumb {
+    top: -.15rem;
+    height: .6rem;
+    width: .6rem;
+    background-color: #29DC54;
+    transform: translateX(-40%);
+    -webkit-transform: translateX(-40%);
+    /* Safari 和 Chrome */
+}
+
+.mt-range-thumb:after {
+    content: ' ';
+    position: absolute;
+    top: -.25rem;
+    left: -.25rem;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+}
+
+
+/*mt-range end*/
+
+
+/*Toast start*/
+
+.toast-class {
+    z-index: 9999 !important;
+}
+
+
+/*Toast end*/
+
+
+/* mint-msgbox */
+
+.mint-msgbox {
+    width: 9.08rem;
+    /* height: 7rem; */
+    border-radius: .1rem !important;
+}
+
+.mint-msgbox-header {
+    padding-top: .73rem;
+}
+
+.mint-msgbox-title {
+    padding: .94rem 0;
+    font-size: .51rem;
+    text-align: center;
+    color: #48C122 !important;
+    font-weight: 100;
+    line-height: .51rem;
+}
+
+.mint-msgbox-content {
+    border: none !important;
+    padding: 0;
+    min-height: .42rem;
+}
+
+.mint-msgbox-message {
+    color: #374452 !important;
+    font-size: .42rem;
+    padding: .17rem 0;
+    line-height: .42rem;
+}
+
+.mint-msgbox-btns {
+    justify-content: space-around;
+    padding: 1.06rem 0;
+}
+
+.mint-msgbox-btn {
+    width: 3.82rem !important;
+    height: 1rem;
+    border-radius: .5rem;
+    border: none;
+    color: #fff !important;
+    flex: none !important;
+    font-size: .48rem;
+}
+
+.mint-msgbox-cancel {
+    background-color: rgba(244, 62, 58, 1) !important;
+}
+
+.mint-msgbox-confirm {
+    background-color: #48C122 !important;
+}
+
+
+/* mint-msgbox end */
+
+.mint-indicator-wrapper {
+    background-color: #eaeff3 !important;
+    z-index: 88;
+}
+
+.mint-indicator-text {
+    color: #374452 !important;
+}
+
+.mint-indicator-mask {
+    z-index: -11;
+}
+
+.mint-switch-input:checked+.mint-switch-core {
+    border-color: #42C300;
+    background-color: #42C300;
+}
+
+.mint-switch-core {
+    width: 48px;
+    height: 24px;
+}
+
+.mint-switch-core::before {
+    width: 46px;
+    height: 22px;
+    background-color: rgba(244, 62, 58, .5);
+}
+
+.mint-switch-core::after {
+    width: 22px;
+    height: 22px;
+}
+
+.mint-switch-input:checked+.mint-switch-core::after {
+    transform: translate(25px, 0px);
+    -webkit-transform: translate(25px, 0px);
+    -moz-transform: translate(25px, 0px);
+    -ms-transform: translate(25px, 0px);
+    -o-transform: translate(25px, 0px);
+}
+
+
+/* 交易模块样式 */
+
+.cbDealbuyoneZB main .maintop {
+    display: flex;
+    align-items: center;
+    height: 1.6rem;
+    width: 100%;
+    padding-left: 0.4rem;
+    box-sizing: border-box;
+}
+
+.cbDealbuyoneZB main .maintop p {
+    line-height: 0.86rem;
+    padding-left: 0.5rem;
+    font-size: 0.38rem;
+    color: #5868d1;
+}
+
+.cbDealbuyoneZB main .maintop>div {
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.86rem;
+    text-align: center;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne {
+    width: 47%;
+    position: absolute;
+    top: 1.4rem;
+    box-shadow: 0px 0px 2px 3px rgba(88, 104, 209, 0.2);
+    z-index: 99;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian {
+    position: absolute;
+    z-index: 99;
+    display: block;
+    width: 0.36rem;
+    height: 0.36rem;
+    background-color: #5868d1;
+    border-radius: 50%;
+    margin-top: 0.36rem;
+    left: 0.4rem;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian:nth-child(1) {
+    background-color: #5868d1;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian:nth-child(3) {
+    background-color: #f43e3a;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian:nth-child(5) {
+    background-color: #1fa7f2;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian:nth-child(7) {
+    background-color: #42c300;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne .jian:nth-child(9) {
+    background-color: #ff9500;
+}
+
+.cbDealbuyoneZB main .maintop>div.selectOne p {
+    padding-right: 0.3rem;
+    text-align: right;
+    line-height: 1.1rem;
+    font-size: 0.42rem;
+}
+
+.cbDealbuyoneZB main .maintop .selectcontent {
+    padding: 0 0.3rem;
+    height: 0.86rem;
+    background-color: #5868d1;
+    border-radius: 3px;
+}

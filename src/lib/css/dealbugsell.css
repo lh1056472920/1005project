@@ -1,0 +1,535 @@
+/* 交易模块样式 */
+.cbmain .maintop {
+    display: flex;
+    align-items: center;
+    height: 1.6rem;
+    width: 100%;
+    padding-left: 0.4rem;
+    box-sizing: border-box;
+}
+
+.cbmain .maintop p {
+    line-height: 0.86rem;
+    padding-left: 0.5rem;
+    font-size: 0.38rem;
+    color: #5868d1;
+}
+
+.cbmain .maintop>div {
+    color: #fff;
+    font-size: 0.4rem;
+    line-height: 0.86rem;
+    text-align: center;
+}
+
+.cbmain .maintop>div.selectOne {
+    width: 47%;
+    position: absolute;
+    top: 1.4rem;
+    box-shadow: 0px 0px 2px 3px rgba(88, 104, 209, 0.2);
+    z-index: 99;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.cbmain .maintop>div.selectOne .jian {
+    position: absolute;
+    z-index: 99;
+    display: block;
+    width: 0.36rem;
+    height: 0.36rem;
+    background-color: #5868d1;
+    border-radius: 50%;
+    margin-top: 0.36rem;
+    left: 0.4rem;
+}
+
+.cbmain .maintop>div.selectOne i.jian:nth-child(1) {
+    background-color: #5868d1;
+}
+
+.cbmain .maintop>div.selectOne i.jian:nth-child(3) {
+    background-color: #f43e3a;
+}
+
+.cbmain .maintop>div.selectOne i.jian:nth-child(5) {
+    background-color: #1fa7f2;
+}
+
+.cbmain .maintop>div.selectOne i.jian:nth-child(7) {
+    background-color: #42c300;
+}
+
+.cbmain .maintop>div.selectOne i.jian:nth-child(9) {
+    background-color: #ff9500;
+}
+
+.cbmain .maintop>div.selectOne p {
+    padding-right: 0.3rem;
+    text-align: right;
+    line-height: 1.1rem;
+    font-size: 0.42rem;
+}
+
+.cbmain .maintop .selectcontent {
+    padding: 0 0.3rem;
+    height: 0.86rem;
+    background-color: #5868d1;
+    border-radius: 3px;
+}
+
+.cbmain {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+}
+
+.cbmain .mainNav {
+    font-size: 0.42rem;
+    display: flex;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.cbmain .mainNav>div.active {
+    border-bottom: 1px solid #48c122;
+    color: #48c122;
+}
+
+.cbmain .mainLeft {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding-left: 0.4rem;
+    box-sizing: border-box;
+}
+
+.cbmain .mainRight {
+    font-size: 0.4rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.cbmain .mainLeft .leftCheck,
+.cbmain .mainLeft .leftMarket {
+    position: relative;
+    font-size: 0.42rem;
+    display: inline-block;
+    width: 50%;
+    height: 1.69rem;
+    line-height: 1.69rem;
+}
+
+.cbmain .mainLeft .mainLeftNav {
+    position: relative;
+}
+
+.cbmain .mainLeft .wire {
+    width: 0px;
+    height: 40%;
+    border: 0.5px solid #000;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+}
+
+.cbmain .mainLeft .yuan {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.2rem;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid #747474;
+    /* margin-top: -5px; */
+}
+
+.cbmain .mainLeft .mainInput .mainInputct>input {
+    width: 100%;
+    height: 1.1rem;
+    /* line-height: 1rem; */
+    border: 1px solid #a6afba;
+    margin-bottom: 0.5rem;
+    font-size: 0.4rem;
+    padding-right: 0.2rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding-left: 2rem;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.cbmain .mainLeft .mainInput .mainInputct>input::-webkit-input-placeholder{
+    font-size: 0.38rem;
+    color: #a6afba;
+    font-weight: 100;
+}
+.cbmain .mainLeft .mainInput .mainInputct {
+    position: relative;
+    font-size: 0.42rem;
+}
+
+.cbmain .mainLeft .mainInput .mainInputct p {
+    font-size: 0.38rem;
+    color: #a6afba;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.3rem;
+}
+
+.cbmain .mainLeft .mainInput .mainInputct p.zhuanhuan,
+.cbmain .mainLeft .mainInput p.zhuanhuanone {
+    width: 100%;
+    left: 0;
+    top: 1.1rem;
+    font-size: 0.36rem;
+    overflow: hidden;
+}
+
+.cbmain .mainLeft .cang {
+    display: flex;
+    width: 100%;
+    height: 0.8rem;
+    border: 1px solid #a6afba;
+    box-sizing: border-box;
+    margin-bottom: 0.7rem;
+    border-radius: 4px;
+}
+
+.cbmain .mainLeft .cang>div {
+    width: 25%;
+    text-align: center;
+    line-height: 0.8rem;
+    color: #a6afba;
+    font-size: 0.38rem;
+    border-right: 1px solid #a6afba;
+}
+
+.cbmain .mainLeft .cang>div.cangactive {
+    background-color: #48c122;
+    color: #fff;
+}
+
+.cbmain .mainLeft .cang>div:last-child {
+    border: none;
+}
+
+.cbmain .mainLeft .avail {
+    overflow: hidden;
+    position: absolute;
+    font-size: 0.36rem;
+    color: #374452;
+    top: -1rem;
+    line-height: 1rem;
+}
+.cbmain .mainLeft .shaoyu{
+    font-size: 0.32rem;
+    color: red;
+    right: 2.6rem;
+}
+.cbmain .mainLeft .likeBuy,
+.cbmain .mainLeft .likeBuyout {
+    margin-top: 0.5rem;
+    height: 1.2rem;
+    width: 100%;
+    border-radius: 0.1rem;
+    font-size: 0.48rem;
+    background-color: #48c122;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.cbmain .mainLeft .likeBuyout {
+    background-color: #f43e3a;
+}
+
+.cbmain .mainLeft .tu {
+    margin-top: 1rem;
+    width: 100%;
+    height: 5.5rem;
+}
+
+.cbmain .mainLeft .tu>div>div>span {
+    display: none;
+}
+
+.cbmain .mainLeft .buysell {
+    position: relative;
+    height: 0.6rem;
+    margin-top: -5.5rem;
+}
+
+.cbmain .mainLeft .oneshu,
+.cbmain .mainLeft .twoshu {
+    border-radius: 2px;
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    left: 1.5rem;
+    top: 0.6rem;
+    color: red;
+    background-color: rgb(59, 161, 121);
+    z-index: 100;
+    font-size: 0;
+}
+
+.cbmain .mainLeft .twoshu {
+    left: 3.2rem;
+    background-color: rgb(211, 82, 80);
+}
+
+.cbmain .mainLeft .oneshu span,
+.cbmain .mainLeft .twoshu span {
+    width: 0.8rem;
+    position: absolute;
+    left: 0.46rem;
+    color: #000;
+    font-size: 12px;
+    line-height: 0.4rem;
+}
+.cbmain .mainLeft .threeshuz {
+    margin-top: 5rem;
+}
+.cbmain .mainLeft .threeshu,
+.cbmain .mainLeft .fourshu {
+    color: #000;
+    font-size: 12px;
+    z-index: 100;
+    margin-left: 0.5rem;
+}
+
+.cbmain .mainLeft .fourshu {
+    margin-left: 1.5rem;
+}
+
+.cbmain .mainRight {
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+}
+
+.cbmain .mainRight .mainrightnav {
+    padding: 0;
+    position: relative;
+    height: 0.8rem;
+    width: 100%;
+    margin-top: -0.1rem;
+    text-align: right;
+}
+
+.cbmain .mainRight .mainrightnav .left {
+    position: absolute;
+    left: 0;
+}
+
+.cbmain .mainRight .mainrighttop,
+.cbmain .mainRight .mainrightbottom {
+    font-size: 0;
+}
+.mainRight .cbmain .mainRight {
+    width: 100%;
+    padding: 0;
+}
+.cbmain .mainRight .mainrighttop ul,
+.cbmain .mainRight .mainrightbottom ul {
+    font-size: 0.38rem;
+    color: #f43e3a;
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+}
+
+.cbmain .mainRight .mainrighttop ul.mainrightright,
+.cbmain .mainRight .mainrightbottom ul.mainrightright li {
+    text-align: right;
+}
+
+.cbmain .mainRight ul li {
+    line-height: 0.61rem;
+}
+
+.cbmain .mainRight>p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cbmain .mainRight p.price {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #374452;
+    line-height: 1.4rem;
+    margin-top: 0.3rem;
+}
+
+.cbmain .mainRight p.priceone {
+    font-size: 0.46rem;
+    color: #a6afba;
+    line-height: 0.5rem;
+}
+
+.cbmain .mainRight .mainrighttop {
+    margin-top: 0.5rem;
+}
+.cbmain .mainRight .mainrightbottom {
+    color: #48c122;
+}
+
+.cbmain .mainRight .mainrightbottom ul {
+    color: #48c122;
+}
+
+.cbmain .mainRight .select {
+    font-size: 0;
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    border: 1px solid #a6afba;
+    margin-top: 0.1rem;
+}
+
+.cbmain .mainRight .select .selectcontent,
+.cbmain .mainRight .select .selectcontenttwo {
+    font-size: 0.4rem;
+    display: inline-block;
+    box-sizing: border-box;
+    border-right: 1px solid #a6afba;
+    position: relative;
+    font-size: 0.32rem;
+    width: 50%;
+    height: 0.8rem;
+    padding-left: 8%;
+    color: #a6afba;
+    line-height: 0.8rem;
+}
+
+.cbmain .mainRight .select .selectcontenttwo {
+    padding-left: 15%;
+    border-right: none;
+}
+
+.cbmain .mainRight .select .selectcontenttwo .jiantou,
+.cbmain .mainRight .select .selectcontent .jiantou {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #a6afba;
+    right: 6%;
+    top: 0.25rem;
+}
+
+.cbmain .mainRight .select .selectcontenttwo .jiantou {
+    right: 12.5%;
+}
+
+.cbmain .mainRight .select .selectTwo,
+.cbmain .mainRight .select .selectOne {
+    font-size: 0.4rem;
+    width: 50%;
+    position: absolute;
+    top: -4rem;
+    border-radius: 3px;
+    /* overflow: hidden; */
+}
+
+.cbmain .mainRight .select .selectTwo {
+    width: 49%;
+    top: -3rem;
+    right: 0;
+}
+
+.cbmain .mainRight .select .selectTwo i,
+.cbmain .mainRight .select .selectOne i {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #fff;
+    position: absolute;
+    right: 2%;
+    bottom: -0.24rem;
+}
+
+.cbmain .mainRight .select .selectTwo i {
+    right: 8%;
+}
+
+.cbmain .mainRight .select .selectTwo p,
+.cbmain .mainRight .select .selectOne p {
+    height: 0.9rem;
+    text-align: center;
+    line-height: 0.9rem;
+    background-color: #fff;
+    color: #374452;
+}
+
+.cbmain .mainRight .select .selectTwo p:hover,
+.cbmain .mainRight .select .selectOne p:hover {
+    color: #48c122;
+}
+
+.cbmain .mainBuy,
+.cbmain .mainsale {
+    padding: 0.2rem 0.4rem;
+    box-sizing: border-box;
+}
+
+.cbmain .mainBuy .mainBuyNav,
+.cbmain .mainsale .mainBuyNav {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: #f43e3a;
+    color: #fff;
+}
+
+.cbmain .mainsale .mainBuyNav {
+    background-color: #48c122;
+}
+
+.cbmain .mainBuy .mainBuyNav span,
+.cbmain .mainsale .mainBuyNav span {
+    font-size: 16px;
+    position: absolute;
+    line-height: 40px;
+    left: 0.6rem;
+}
+
+.cbmain .mainBuy .mainBuyNav span.two,
+.cbmain .mainsale .mainBuyNav span.two {
+    position: absolute;
+    left: 75%;
+}
+
+.cbmain .mainBuy .mainBuyContent,
+.cbmain .mainsale .mainBuyContent {
+    /* height: 130px; */
+    font-size: 0;
+    background-color: #fff;
+}
+
+.cbmain .mainBuy .mainBuyContent>div,
+.cbmain .mainsale .mainBuyContent>div {
+    display: inline-block;
+    width: 33.33%;
+    font-size: 16px;
+    text-align: center;
+    color: #374452;
+}
+
+.cbmain .mainBuy .mainBuyContent>div p,
+.cbmain .mainsale .mainBuyContent>div p {
+    padding-top: 10px;
+}
+
+.cbmain .iconfont p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -20%;
+}

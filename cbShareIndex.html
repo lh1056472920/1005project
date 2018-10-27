@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取免费体验VIP，参与最高可得1BCH</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 10.8rem;
+            height: 100vh;
+            overflow: auto;
+        }
+        .main{
+            background: #fff url(http://192.168.1.211:8080/share.png) no-repeat;
+            background-size: 10.8rem 5.4rem;
+            text-align: center;
+            padding-top: .58rem;
+        }
+        .remind{
+            margin: 4.18rem 0 0;
+            font-size:0.48rem;
+            font-weight:bold;
+            color:rgba(255,150,2,1);
+        }
+        .share-amount{
+            font-size:0.86rem;
+            font-weight:bold;
+            color:rgba(255,150,2,1);
+            margin: 0.2rem 0 0.5rem;
+        }
+        .logo-text{
+            font-size:0.72rem;
+            font-weight:bold;
+            color:rgba(255,255,255,1);
+        }
+        .input-box{
+            width: 7.5rem;
+            height:1.2rem;
+            line-height: 1.2rem;
+            border-radius: 0.1rem;
+            margin: 0 auto;
+            background-color: rgba(126,107,0,0.08);
+            font-size: .4rem;
+            vertical-align: middle;
+            margin-bottom: 0.8rem;
+        }
+        .text{
+            width: 4.18rem;
+            height: 100%;
+            padding-left: 0.5rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            float: left;
+        }
+        .text.invite{
+            float: none;
+        }
+        .input-box.nput-box-invite{
+            text-align: left;
+        }
+        .invite-text{
+            padding-left: 0.5rem;
+            color: #504400;
+        }
+        .showVipModal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .showVipModal-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8.66rem;
+            height: 11.89rem;
+            background: #fff url(http://192.168.1.211:8080/share.png) no-repeat;
+            background-size: 8.66rem 4.02rem;
+            border-radius: .2rem;
+        }
+        .showVipModal-content .orange{
+            color: #FF9602;
+            font-size: 0.54rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .nomalText-container{
+            margin-top: .58rem;
+        }
+        .showVipModal-content .orange.margin{
+            padding-top: 4.32rem;
+        }
+        .showVipModal-content .nomalText{
+            font-size: 0.36rem;
+            color: #1A1A1A;
+            text-align: center;
+            height: .58rem;
+            line-height: .58rem;
+        }
+        .modal-btn{
+            width: 7.5rem;
+            height: 1.15rem;
+            line-height: 1.15rem;
+            text-align: center;
+            background-color: #FDE141;
+            border-radius: 0.1rem;
+            font-size: 0.42rem;
+            color: #504400;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 9rem;
+            background-color: #fff;
+            border-radius: .2rem;
+        }
+        .content{
+            padding: 0 0.5rem;
+            min-height: 2.8rem;
+            display: flex;
+            align-items: center;
+        }
+        .content p{
+            font-size:0.54rem;
+            color:rgba(26,26,26,1);
+        }
+        .controll{
+            height: 1.44rem;
+            line-height:1.44rem;
+            font-size:0.42rem;
+            color:rgba(88,104,209,1);
+            text-align: right;
+            padding-right: 1rem;
+        }
+        .getCode{
+            color: #1dd024;
+        }
+        .getCode.gray{
+            color: #d5d5d5;
+        }
+        .submit-btn{
+            width: 7.5rem;
+            height: 1.15rem;
+            line-height: 1.15rem;
+            background:rgba(253,225,65,1);
+            border-radius:0.1rem;
+            color: #504400;
+            font-size: .42rem;
+            text-align: center;
+            margin: 0 auto 0.8rem;
+        }
+        .down{
+            display: block;
+            width: 7.5rem;
+            height:1.15rem;
+            line-height: 1.15rem;
+            background:rgba(88,104,209,1);
+            color: #fff;
+            text-align: center;
+            margin: 0 auto;
+            text-decoration: none;
+            outline: none;
+            font-size: 0.42rem;
+        }
+        .tip{
+            display: block;
+            position: absolute;
+            top: .43rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: rgba(0, 0, 0,0.8);
+            color: #fff;
+            margin: 0 auto;
+            padding: 0.2rem;
+            border-radius: .09rem;
+            opacity: 0;
+            font-size: .4rem;
+            white-space: nowrap;
+        }
+        .tip.active{
+            top: .72rem;
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+    
+<body>
+    <div class="main">
+        <p class="logo-text">邀请即挖矿 分享即挖矿</p>
+        <p class="remind">恭喜您获得VIP特权体验</p>
+        <p class="share-amount">最高1BCH</p>
+        <div class="input-box">
+            <input type="number" id="phone" class="text phone" placeholder="请输入手机号码">
+        </div>
+        <div class="input-box">
+            <input type="text" class="text code" id="codeValue" placeholder="请输入验证码">
+            <span id="getCode" class="getCode">获取验证码</span>
+        </div>
+        <div class="input-box nput-box-invite">
+            <span class="invite-text">邀请码</span>
+            <input type="text" id="invite-text" class="text invite">
+        </div>
+        <div id="submit-btn" class="submit-btn">
+            立即获取
+        </div>
+        <a href="bixiaomi://abc" id="downloadApp" class="down">马上下载app</a>
+    </div>
+    <div id="showVipModal" class="showVipModal" >
+        <div class="showVipModal-content">
+            <p class="orange margin">恭喜您</p>
+            <p class="orange">获得免费VIP一个月</p>
+            <div class="nomalText-container">
+                <p class="nomalText">1.VIP专属行情解读群</p>
+                <p class="nomalText">2.自动交易</p>
+                <p class="nomalText">3.24小时短信、电话提醒</p>
+                <p class="nomalText">4.套利模式</p>
+                <p class="nomalText">5.分笔委托</p>
+            </div>
+            <div id="showVipModal-btn" class="modal-btn">
+                马上领取
+            </div>
+        </div>
+    </div>
+    <p id="tip" class="tip"></p>
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div id="content" class="content">
+                <div class="content-text">
+                    <p>领取VIP会员成功，</p>
+                    <p>到期时间为：<span id="vip-date">2018-09-06</span></p>
+                </div>
+            </div>
+            <div class="controll">
+                确定
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	var width = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+        document.documentElement.style.fontSize = width/10.8 + 'px'
+        
+        var setTime = 60;
+        var $getCode = document.getElementById('getCode');
+        var searchObject = {};
+        var $modal = document.getElementById('modal');
+        var $cancle = document.getElementById('cancel');
+        var $content = document.getElementById('content');
+        var $confirm = document.getElementById('confirm');
+        var $submitBtn = document.getElementById('submit-btn');
+        var $tip = document.getElementById('tip');
+        var $showVipModal = document.getElementById('showVipModal');
+        var $showVipModalBtn = document.getElementById('showVipModal-btn');
+        var $codeValue = document.getElementById('codeValue');
+        var $downloadApp = document.getElementById('downloadApp');
+        //获取参数
+        getSearch();
+        document.getElementById('invite-text').value = searchObject.inviteCode || '';
+        $getCode.addEventListener('click', function(e) {
+            var self = this;
+            var code = document.getElementById('phone').value;
+            if (hasClass(self,'gray') || !code) {
+                return;
+            }
+            addClass(self,'gray')
+            getCode(code, function(result){
+                if (result) {
+                    showTip('验证码已发送到您的手机')
+                    intervalText(self,'获取验证码')
+                } else {
+                    showTip('获取验证码失败，请稍候再试！');
+                    removeClass(self,'gray')
+                }
+            })
+        })
+        $submitBtn.addEventListener('click', function(){
+            login()
+        })
+        $modal.addEventListener('click', function(){
+            $modal.style.display = 'none'
+        })
+        $showVipModalBtn.addEventListener('click', function(){
+            $showVipModal.style.display = 'none';
+        })
+        //唤醒app
+        $downloadApp.addEventListener('click', function(){
+            setTimeout(function(){
+                window.location.href = 'http://192.168.1.211:8080/H556CB065_0925143552.apk';
+            },2000)
+        })
+        /*$cancle.addEventListener('click', function() {
+            hideModal()
+        })
+        $confirm.addEventListener('click', function() {
+            hideModal()
+        })*/
+        //获取验证码
+        function getCode(value,callback) {
+            createXHR({
+                url: 'http://192.168.1.225:56561/send_sms',
+                type: 'post',
+                data: {
+                    data: value,
+                    type: 2,
+                    code: 1
+                },
+                success: function(data) {
+                    console.log(data);
+                    if (typeof callback === 'function') {
+                        if (data.status === 0) {
+                            callback(true,data)
+                        } else {
+                            callback(false,data)
+                        }
+                    }
+                },
+                error: function(e) {
+                    if (typeof callback === 'function') {
+                        callback(false,e)
+                    }
+                }
+            })
+        }
+        function login() {
+            createXHR({
+                url: 'http://192.168.1.225:56561/chaobi/vip/registerbyphone',
+                type: 'post',
+                data: {
+                    phone: document.getElementById('phone').value,
+                    fid: document.getElementById('invite-text').value,
+                    code: $codeValue.value
+                },
+                success: function(data) {
+                    showTip('领取成功')
+                },
+                error: function(e) {
+                    if (typeof callback === 'function') {
+                        callback(false,e)
+                    }
+                }
+            })
+        }
+        //创建XMLHttpRequest
+        function createXHR(params) {
+            var xhr = new XMLHttpRequest();
+            var type = params.type && params.type.toUpperCase() || 'GET';
+            var reqParams = params.data?stringify(params.data):null;
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var res;
+                    if (xhr.status == 200) {
+                        try {
+                            res = JSON.parse(xhr.responseText)
+                        } catch (e) {
+                            res = xhr.responseText
+                        }
+                        typeof params.success === 'function' && params.success(res)
+                    } else {
+                        try {
+                            res = JSON.parse(xhr.readyState)
+                        } catch (e) {
+                            res = xhr.readyState
+                        }
+                        typeof params.error === 'function' && params.error(res)
+                    }
+                }
+            }
+            xhr.open( type, params.url );
+            if (type === 'POST') {
+                var contentType = params['Content-Type'] || 'application/x-www-form-urlencoded';
+                xhr.setRequestHeader('Content-Type',contentType);
+            }
+            xhr.send(reqParams);
+        }
+        
+        function stringify(params) {
+            if ('object' !== typeof params) {
+                return ''
+            }
+            let string = ''
+            for (let key in params) {
+                if (params.hasOwnProperty(key)) {
+                    string += '&' + key + '=' + params[key]
+                }
+            }
+            return string.substr(1)
+        }
+        
+        function hideModal() {
+            $content.innerHTML = '';
+            $modal.style.display = 'none'
+        }
+        
+        function showModal(params) {
+            $content.innerHTML = params.content;
+            $modal.style.display = 'block'
+        }
+        //添加class
+        function addClass(el,className) {
+            if (!hasClass(el,className)) {
+                var oldClassName = el.className.split(" ") || [];
+                oldClassName.push(className);
+                el.className = oldClassName.join(" ")
+            }
+        }
+        //移除class
+        function removeClass(el,className) {
+            var oldClassName = el.className.split(" ") || [];
+            var isExist = false;
+            for (var i = 0; i < oldClassName.length; i++) {
+                if (oldClassName[i] === className) {
+                    oldClassName.splice(i,1)
+                    el.className = oldClassName.join(" ");
+                    break;
+                }
+            }
+        }
+        //是否有class
+        function hasClass(el, className) {
+            var oldClassName = el.className.split(" ") || [];
+            var isExist = false;
+            for (var i = 0; i < oldClassName.length; i++) {
+                if (oldClassName[i] === className) {
+                    isExist = true;
+                    break;
+                }
+            }
+            return isExist;
+        }
+        //60秒倒计时
+        function intervalText(el,text) {
+            var timer = setInterval(function(){
+                if (setTime > 0) {
+                    el.innerHTML = setTime + 's 重新获取';
+                    setTime -= 1;
+                } else {
+                    removeClass(el,'gray')
+                    el.innerHTML = text;
+                    clearInterval(timer);
+                    setTime = 60;
+                }
+            },1000)
+        }
+        //提示
+        function showTip(text){
+            $tip.innerHTML = text
+            addClass($tip,'active')
+            setTimeout(function() {
+                removeClass($tip,'active')
+            },3000)
+        }
+        //获取参数
+        function getSearch() {
+            var searchString = location.search.slice(1) || '';
+            var searchArray = searchString.split('&');
+            for (var i = 0; i < searchArray.length; i++) {
+                var ary = searchArray[i].split('=');
+                searchObject[ary[0]] = ary[1];
+            }
+        }
+    </script>
+</body>
+
+</html>
